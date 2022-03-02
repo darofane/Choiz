@@ -1,0 +1,13 @@
+<div *ngIf="!viewModal" class="scroll-modal">
+    <div class="window-modal">
+        <app-modal (close)="viewModal = $event"></app-modal>
+    </div>
+</div>
+<app-header></app-header>
+<div id="consultation" class="consult">
+    <p class="consult-text">{{message}}</p>
+    <button class="consult-btn text" style="grid-column-start: 5;" (click)="agendar()">Agendar una consulta</button>
+</div>
+<app-medications id="medicine"></app-medications>
+<app-ti-question></app-ti-question>
+<app-footer id="footer"></app-footer>

@@ -1,0 +1,54 @@
+<div class="container" style="border-top: 1px solid lightgray;">
+    <h2 class="title">Lista de medicamentos</h2>
+    <div>
+        <table class="table-grid">
+            <thead style="margin-top: 1rem;">
+                <tr class="title-table"><p >Pastillas</p></tr>
+                <tr class="table-container table-header">
+                    <th>Marcas que ofrecemos</th>
+                    <th>Laboratorio</th>
+                    <th>Precio <small style="font-weight: 500;">(sin cobertura médica)</small></th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let pildora of pildoras" class="table-container">
+                    <td>{{pildora.brand |uppercase}}</td>
+                    <td>{{pildora.laboratory}}</td>
+                    <td>{{pildora.price|currency:'ARS':'symbol-narrow'}}</td>
+                </tr> 
+            </tbody>
+
+            <thead style="margin-top: 1rem;">
+                <tr class="title-table"><p >Anillos</p></tr>
+                <tr class="table-container table-header">
+                    <th>Marcas que ofrecemos</th>
+                    <th>Laboratorio</th>
+                    <th>Precio <small style="font-weight: 500;">(sin cobertura médica)</small></th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let anillo of anillos" class="table-container">
+                    <td>{{anillo.brand |uppercase}}</td>
+                    <td>{{anillo.laboratory}}</td>
+                    <td>{{anillo.price|currency:'ARS':'symbol-narrow'}}</td>
+                </tr> 
+            </tbody>
+
+            <thead style="margin-top: 1rem;">
+                <tr class="title-table"><p >Parches</p></tr>
+                <tr class="table-container table-header">
+                    <th>Marcas que ofrecemos</th>
+                    <th>Laboratorio</th>
+                    <th>Precio <small style="font-weight: 500;">(sin cobertura médica)</small></th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let parche of parches" class="table-container">
+                    <td>{{parche.brand |uppercase}}</td>
+                    <td>{{parche.laboratory}}</td>
+                    <td>{{parche.price|currency:'ARS':'symbol-narrow'}}</td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+</div>

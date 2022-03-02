@@ -1,0 +1,10 @@
+<div class="quetion">
+    <div class="arrows">
+        <p class="title-quetion">{{que?.title}}</p>
+        <a (click)="open()">
+            <img src="../../../assets/images/arrow.svg" alt="close faq"
+                [ngStyle]="{'transform': view === true ? 'rotate(0deg)': 'rotate(180deg)'}">
+        </a>
+    </div>
+    <p class="description-quetion" *ngIf="view">{{que?.description}}</p>
+</div>
